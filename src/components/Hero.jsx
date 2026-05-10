@@ -34,11 +34,11 @@ export default function Hero({ enableAnimations }) {
           transition={enableAnimations ? { delay: 0.6, duration: 0.6 } : false}
           className="text-xl mt-4 text-gray-300 font-semibold tracking-wide"
         >
-          Full Stack Developer | React | Node | SQL
+          Full Stack Engineer | FastAPI · React · PostgreSQL · Kafka
         </motion.h2>
 
         <p className="mt-6 max-w-xl mx-auto text-gray-400 leading-relaxed">
-          Full Stack Developer with 3+ years of experience building scalable enterprise web applications, dashboards, and real-time monitoring systems.
+          Full Stack Engineer with 3.5+ years of experience building enterprise-scale web applications, real-time monitoring systems, and AI-integrated operational platforms.
         </p>
         
         <motion.a

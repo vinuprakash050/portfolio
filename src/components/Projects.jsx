@@ -2,31 +2,39 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Fusion Worlds",
-    desc: "Real-time AI-powered incident management platform for city-scale ICCC operations. Web + Mobile. Kafka event mesh, WebSockets, Redux state.",
-    tech: ["React.js", "Redux", "Node.js", "Kafka", "WebSockets"],
-    achievements: "Developed entire web frontend + shared backend APIs. Implemented event-driven architecture and deployment pipelines.",
-    image: "fusion-worlds",
-    link: "#",
-    github: "https://github.com/vinu/fusion-worlds"
-  },
-  {
-    title: "Fusion 2.0",
-    desc: "Enterprise operations monitoring platform. Adaptors, connectors, incident management, map visualizations.",
-    tech: ["React.js", "Node.js", "SQL", "WebSockets", "Maps API"],
-    achievements: "Built core modules - adaptors, schedulers, incident screens. Real-time alerts via WebSockets.",
-    image: "fusion-2",
-    link: "#",
-    github: "https://github.com/vinu/fusion-2"
+    title: "Fusion Worlds.AI",
+    subtitle: "AI-Powered Incident Management Platform",
+    desc: "Enterprise-grade AI-powered incident management platform for ICCC operations with real-time event streaming and live operational dashboards.",
+    tech: ["FastAPI", "Python", "React.js", "PostgreSQL", "SQLAlchemy", "Kafka", "SSE"],
+    achievements: [
+      "Built async backend services using FastAPI, SQLAlchemy 2.0, AsyncPG, and PostgreSQL.",
+      "Implemented Kafka-based pub/sub workflows for real-time operational event streaming.",
+      "Developed SSE-based APIs for live incident monitoring and operational dashboards.",
+      "Built backend APIs supporting incident lifecycle management, task assignment, and operational workflows."
+    ]
   },
   {
     title: "TC4 Smart Building",
-    desc: "Centralized building management dashboard. AQI, parking, analytics, Azure AD + RBAC security.",
-    tech: ["React.js", "Redux", "Recharts.js", "CryptoJS", "Azure AD"],
-    achievements: "15+ reusable components, dynamic charts, Triple DES security, responsive layouts.",
-    image: "tc4-building",
-    link: "#",
-    github: "https://github.com/vinu/tc4-dashboard"
+    subtitle: "Smart Building Web Application",
+    desc: "Centralized building management platform supporting real-time monitoring and analytics for 300–500 concurrent users.",
+    tech: ["React.js", "Redux", "Node.js", "SQL", "REST APIs", "Azure AD", "Recharts.js"],
+    achievements: [
+      "Built reusable React.js dashboard modules and monitoring interfaces.",
+      "Integrated REST APIs for parking systems, AQI monitoring, and facility analytics.",
+      "Implemented Azure AD authentication and RBAC-based access control."
+    ]
+  },
+  {
+    title: "Fusion 2.0",
+    subtitle: "Enterprise Operations & Monitoring Platform",
+    desc: "Enterprise operations and monitoring platform with incident management, schedulers, adaptors, and workflow automation interfaces.",
+    tech: ["React.js", "Node.js", "SQL", "REST APIs", "WebSockets"],
+    achievements: [
+      "Developed incident management systems, schedulers, adaptors, and workflow automation interfaces.",
+      "Built real-time incident tracking systems using WebSockets and operational dashboards.",
+      "Developed backend APIs for incident logging and workflow automation.",
+      "Optimized SQL queries and backend APIs improving system responsiveness."
+    ]
   }
 ];
 
@@ -57,11 +65,20 @@ export default function Projects({ enableAnimations }) {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-blue-500/5 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
-                <h3 className="text-2xl font-black mb-4 text-white group-hover:text-primary transition-colors">{p.title}</h3>
-                <p className="text-gray-300 leading-relaxed mb-6">{p.desc}</p>
-                <div className="flex flex-wrap gap-2 mb-6">
+                <h3 className="text-2xl font-black mb-1 text-white group-hover:text-primary transition-colors">{p.title}</h3>
+                <p className="text-primary/70 text-sm font-semibold mb-4">{p.subtitle}</p>
+                <p className="text-gray-300 leading-relaxed mb-5">{p.desc}</p>
+                <ul className="space-y-2 mb-6">
+                  {p.achievements.map((a, k) => (
+                    <li key={k} className="flex items-start gap-2 text-sm text-gray-400">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 flex-shrink-0"></span>
+                      {a}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-wrap gap-2">
                   {p.tech.map((tag, j) => (
-                    <span key={j} className="px-4 py-2 bg-white/10 hover:bg-primary/20 text-primary text-sm font-semibold rounded-full border border-primary/30 hover:border-primary/50 transition-all duration-300 group-hover:scale-105">
+                    <span key={j} className="px-3 py-1 bg-white/10 hover:bg-primary/20 text-primary text-xs font-semibold rounded-full border border-primary/30 hover:border-primary/50 transition-all duration-300">
                       {tag}
                     </span>
                   ))}

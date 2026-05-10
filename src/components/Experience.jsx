@@ -6,16 +6,23 @@ export default function Experience({ enableAnimations }) {
     {
       company: "L&T Technology Services Ltd.",
       role: "Full Stack Developer",
-      duration: "Dec 2022 - Present • Hyderabad",
+      duration: "Dec 2022 – Present • Hyderabad, Telangana",
       icon: "🏢",
       achievements: [
-        "Developed scalable full-stack modules using React.js, Node.js, JavaScript, SQL, REST APIs",
-        "Built responsive UI components integrated with backend services for end-to-end features",
-        "Created API endpoints, CRUD operations, optimized database queries",
-        "Performance optimization, secure data handling across devices",
-        "Delivered production-ready features collaborating with teams"
+        "Developed enterprise-scale full-stack applications using React.js, FastAPI, Python, Node.js, PostgreSQL, SQLAlchemy, and REST APIs.",
+        "Designed and developed 100+ RESTful APIs supporting incident workflows, authentication systems, and real-time monitoring.",
+        "Built scalable async backend services using FastAPI, SQLAlchemy 2.0, AsyncPG, and PostgreSQL with multi-tenant architecture.",
+        "Implemented SSE and WebSocket-based real-time communication systems for live operational dashboards.",
+        "Developed Kafka and Event Mesh based pipelines integrating real-time sensor and camera data with LLM-powered operational workflows.",
+        "Worked on AI-integrated incident processing systems generating contextual recommendations for ICCC operators.",
+        "Designed backend architecture using Repository Pattern, Dependency Injection, DTO services, and Domain-Driven Design principles.",
+        "Optimized backend performance through indexing, query optimization, connection pooling, caching, and async concurrency handling.",
+        "Implemented concurrency-safe async workflows using asyncio.gather and non-blocking async processing.",
+        "Built reusable React.js dashboard modules and modular frontend systems using Redux and Context API.",
+        "Developed secure authentication and authorization workflows using Azure AD, RBAC, SpiceDB, and middleware systems.",
+        "Independently owned and delivered multiple frontend and backend modules while collaborating directly with clients."
       ],
-      tech: ["React.js", "Node.js", "SQL", "REST APIs", "Redux"]
+      tech: ["React.js", "FastAPI", "Python", "Node.js", "PostgreSQL", "SQLAlchemy", "Kafka", "SSE", "WebSockets", "Redux", "Azure AD", "RBAC", "SpiceDB"]
     }
   ];
 
@@ -117,6 +124,36 @@ export default function Experience({ enableAnimations }) {
           ))}
 
         </div>
+
+        {/* Education */}
+        <motion.h2
+          className="text-4xl md:text-5xl font-black mt-20 mb-10 text-center bg-gradient-to-r from-primary via-blue-400 to-purple-500 bg-clip-text text-transparent"
+          initial={enableAnimations ? { opacity: 0, y: 30 } : false}
+          whileInView={enableAnimations ? { opacity: 1, y: 0 } : false}
+          viewport={{ once: true }}
+        >
+          Education
+        </motion.h2>
+
+        <motion.div
+          className="glass p-10 rounded-3xl backdrop-blur-xl border border-white/10 shadow-2xl hover:shadow-primary/20 transition-all duration-500"
+          initial={enableAnimations ? { opacity: 0, y: 40 } : false}
+          whileInView={enableAnimations ? { opacity: 1, y: 0 } : false}
+          viewport={{ once: true }}
+          transition={enableAnimations ? { duration: 0.6 } : false}
+          whileHover={{ scale: 1.02 }}
+        >
+          <div className="flex items-center gap-5 mb-4">
+            <div className="w-16 h-16 bg-gradient-to-br from-primary to-blue-500 rounded-2xl flex items-center justify-center text-2xl shadow-lg">
+              🎓
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white">Sona College of Technology</h3>
+              <p className="text-primary font-semibold">Bachelor of Engineering (B.E.) – Computer Science and Engineering</p>
+              <p className="text-gray-400 text-sm">2018 – 2022 &nbsp;|&nbsp; CGPA: 8.3</p>
+            </div>
+          </div>
+        </motion.div>
 
       </div>
 

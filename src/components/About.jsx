@@ -3,17 +3,18 @@ import { motion } from "framer-motion";
 export default function About({ enableAnimations }) {
 
   const highlights = [
-    { title: "3+ Years", subtitle: "Experience" },
+    { title: "3.5+ Years", subtitle: "Experience" },
     { title: "Enterprise", subtitle: "Applications" },
-    { title: "Full Stack", subtitle: "Development" }
+    { title: "Full Stack", subtitle: "Engineering" }
   ];
 
   const strengths = [
-    "Scalable React & Node.js Applications",
-    "REST APIs & Database Optimization",
-    "Real-Time Systems using WebSockets",
-    "Enterprise Dashboard Development",
-    "Secure Data Handling & Performance Optimization"
+    "Scalable React.js & FastAPI Applications",
+    "100+ RESTful APIs & Database Optimization",
+    "Real-Time Systems using SSE & WebSockets",
+    "Kafka & Event-Driven Architecture",
+    "AI-Integrated Operational Platforms",
+    "Secure Auth with Azure AD, RBAC & SpiceDB"
   ];
 
   return (
@@ -38,10 +39,10 @@ export default function About({ enableAnimations }) {
         <motion.p 
           className="text-lg text-gray-300 leading-relaxed text-center max-w-3xl mx-auto"
         >
-          Full Stack Developer with 3+ years of experience building scalable 
-          enterprise applications using React.js, Node.js, SQL, and REST APIs. 
-          Passionate about developing responsive dashboards, real-time monitoring 
-          systems, and performance-optimized backend services.
+          Full Stack Engineer with 3.5+ years of experience building enterprise-scale web applications,
+          real-time monitoring systems, and AI-integrated operational platforms using React.js, FastAPI,
+          Python, Node.js, PostgreSQL, and event-driven architectures. Skilled in scalable frontend systems,
+          async backend services, SSE-based communication, Kafka-driven workflows, and distributed systems.
         </motion.p>
 
         {/* Highlight Cards */}
