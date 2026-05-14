@@ -2,6 +2,42 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "TodorganizerAI",
+    subtitle: "AI-Powered Task Organizer",
+    desc: "An intelligent todo and task management app that leverages AI to help users organize, prioritize, and stay on top of their tasks effortlessly.",
+    tech: ["React.js", "AI/LLM", "Netlify"],
+    achievements: [
+      "Integrated AI to automatically categorize and prioritize tasks based on context.",
+      "Built a clean, intuitive UI for seamless task creation and management.",
+      "Deployed as a fast, serverless web app on Netlify."
+    ],
+    link: "https://todorganizerai.netlify.app/"
+  },
+  {
+    title: "Genzifyy",
+    subtitle: "Streetwear E-Commerce Store",
+    desc: "A modern streetwear storefront for oversized tees, hoodies, and tank tops — built with fluid motion, glass surfaces, and a future-ready frontend architecture.",
+    tech: ["React.js", "Tailwind CSS", "Framer Motion", "Netlify"],
+    achievements: [
+      "Designed a modular storefront with glassmorphism UI and smooth animations.",
+      "Built product catalog pages for drops including oversized tees, hoodies, and tank tops.",
+      "Crafted a brand identity with bold typography and a minimal, sharp aesthetic."
+    ],
+    link: "https://genzifyy.netlify.app/"
+  },
+  {
+    title: "KadaiCraft",
+    subtitle: "Multi-Tenant SaaS Website Builder",
+    desc: "A SaaS platform that enables businesses to create and manage template-based websites for multiple customers from a single dashboard.",
+    tech: ["React.js", "Node.js", "Tailwind CSS", "Netlify"],
+    achievements: [
+      "Built a multi-tenant architecture supporting independent website instances per customer.",
+      "Developed a template system allowing rapid site generation from reusable layouts.",
+      "Designed an admin dashboard for managing customer sites and configurations."
+    ],
+    link: "https://kadaicraft.netlify.app/"
+  },
+  {
     title: "Fusion Worlds.AI",
     subtitle: "AI-Powered Incident Management Platform",
     desc: "Enterprise-grade AI-powered incident management platform for ICCC operations with real-time event streaming and live operational dashboards.",
@@ -76,13 +112,26 @@ export default function Projects({ enableAnimations }) {
                     </li>
                   ))}
                 </ul>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-5">
                   {p.tech.map((tag, j) => (
                     <span key={j} className="px-3 py-1 bg-white/10 hover:bg-primary/20 text-primary text-xs font-semibold rounded-full border border-primary/30 hover:border-primary/50 transition-all duration-300">
                       {tag}
                     </span>
                   ))}
                 </div>
+                {p.link && (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 hover:bg-primary/20 text-primary text-sm font-semibold rounded-xl border border-primary/30 hover:border-primary/60 transition-all duration-300 group/link"
+                  >
+                    <span>Live Demo</span>
+                    <svg className="w-4 h-4 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
               </div>
             </motion.div>
           ))}
